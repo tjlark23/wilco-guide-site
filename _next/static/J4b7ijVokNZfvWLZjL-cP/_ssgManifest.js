@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fseniors\u002F[cityOrCategory]","\u002Fseniors\u002Fdirectory\u002F[slug]","\u002Fseniors\u002Fguides\u002F[slug]","\u002Fseniors\u002Frelocating\u002F[city]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
