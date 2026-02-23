@@ -86,7 +86,7 @@
       <a href="#lead-form" class="btn btn-orange btn-sm sub-nav-cta">Get Free Quotes</a>
       <div class="sub-nav-center">
         <div class="sub-nav-dropdown">
-          <a href="#" class="sub-nav-link active">Cities <span class="sub-nav-arrow">&#9662;</span></a>
+          <button class="sub-nav-link active">Cities <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
           <div class="sub-nav-dropdown-menu">
             <a href="/foundation-repair/georgetown/">Georgetown</a>
             <a href="/foundation-repair/round-rock/">Round Rock</a>
@@ -100,7 +100,7 @@
         </div>
         <a href="/foundation-repair/costs/" class="sub-nav-link">Cost Guide</a>
         <a href="/foundation-repair/signs/" class="sub-nav-link">Warning Signs</a>
-        <a href="/foundation-repair/#faq" class="sub-nav-link">FAQ</a>
+        <a href="#faq" class="sub-nav-link">FAQ</a>
       </div>
       <div class="sub-nav-spacer"></div>
     </div>
@@ -113,11 +113,21 @@
     </div>
   </div>
 
-  <!-- Hero -->
-  <div class="page-hero">
+  <!-- City Hero -->
+  <div class="city-hero">
     <div class="container">
-      <h1>Foundation Repair in Taylor, Texas</h1>
-      <p>Taylor sits on the clay soil that bears its name. Get free quotes from trusted local contractors and protect your home — whether it was built in 1920 or 2025.</p>
+      <div class="city-hero-inner">
+        <div class="city-hero-text">
+          <h1>Foundation Repair in Taylor, TX</h1>
+          <p class="city-hero-sub">Home to Taylor Clay — literally named after this city — one of the most problematic soil types in Texas.</p>
+          <div class="city-hero-stats">
+            <span class="city-hero-stat">✓ Free Inspections</span>
+            <span class="city-hero-stat">✓ Vetted Local Contractors</span>
+            <span class="city-hero-stat">✓ No Obligation</span>
+          </div>
+        </div>
+        <a href="#lead-form" class="btn btn-orange city-hero-cta">Get Free Quotes →</a>
+      </div>
     </div>
   </div>
 
@@ -170,6 +180,7 @@
 
           <!-- Section Image -->
           <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="Foundation repair contractor working on a Taylor area home" class="section-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80" alt="Craftsman-style homes in Taylor, Texas" class="section-img" loading="lazy">
 
           <!-- Taylor Clay Deep Dive -->
           <h2 class="section-heading">Taylor Clay: The Soil Named After This City</h2>
@@ -255,7 +266,7 @@
           </div>
 
           <!-- FAQ -->
-          <h2 class="section-heading">Frequently Asked Questions</h2>
+          <h2 class="section-heading" id="faq">Frequently Asked Questions</h2>
           <div class="card mb-48">
             <details class="faq-item">
               <summary>Why is Taylor Clay soil so bad for foundations?</summary>
@@ -282,7 +293,21 @@
         </div>
 
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="lead-form">
+
+          <!-- Mini Form -->
+          <div class="sidebar-card sidebar-form">
+            <h4>Request a Free Quote</h4>
+            <p class="sidebar-desc">Tell us about your foundation concerns and we will connect you with vetted local contractors.</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+              <input type="hidden" name="subject" value="Foundation Repair Quote — Taylor | WilCo Guide">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+              <input type="email" name="email" placeholder="Email address" required>
+              <button type="submit">Get Free Quotes</button>
+            </form>
+          </div>
 
           <!-- Quick Links -->
           <div class="sidebar-card">
@@ -300,20 +325,6 @@
               <li><a href="/foundation-repair/pflugerville/">Pflugerville</a></li>
               <li><a href="/foundation-repair/taylor/">Taylor</a></li>
             </ul>
-          </div>
-
-          <!-- Mini Form -->
-          <div class="sidebar-card sidebar-form">
-            <h4>Request a Free Quote</h4>
-            <p class="sidebar-desc">Tell us about your foundation concerns and we will connect you with vetted local contractors.</p>
-            <form action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-              <input type="hidden" name="subject" value="Foundation Repair Quote — Taylor | WilCo Guide">
-              <input type="text" name="name" placeholder="Your name" required>
-              <input type="tel" name="phone" placeholder="Phone number" required>
-              <input type="email" name="email" placeholder="Email address" required>
-              <button type="submit">Get Free Quotes</button>
-            </form>
           </div>
 
           <!-- Trust Card -->

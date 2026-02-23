@@ -135,7 +135,7 @@
       <a href="#lead-form" class="btn btn-orange btn-sm sub-nav-cta">Get Free Quotes</a>
       <div class="sub-nav-center">
         <div class="sub-nav-dropdown">
-          <a href="#" class="sub-nav-link">Cities <span class="sub-nav-arrow">&#9662;</span></a>
+          <button class="sub-nav-link">Cities <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
           <div class="sub-nav-dropdown-menu">
             <a href="/foundation-repair/georgetown/">Georgetown</a>
             <a href="/foundation-repair/round-rock/">Round Rock</a>
@@ -149,7 +149,7 @@
         </div>
         <a href="/foundation-repair/costs/" class="sub-nav-link active">Cost Guide</a>
         <a href="/foundation-repair/signs/" class="sub-nav-link">Warning Signs</a>
-        <a href="/foundation-repair/#faq" class="sub-nav-link">FAQ</a>
+        <a href="#faq" class="sub-nav-link">FAQ</a>
       </div>
       <div class="sub-nav-spacer"></div>
     </div>
@@ -162,12 +162,21 @@
     </div>
   </div>
 
-  <!-- Hero -->
-  <div class="page-hero">
+  <!-- City Hero -->
+  <div class="city-hero">
     <div class="container">
-      <h1>How Much Does Foundation Repair Cost in Williamson County? (2026 Guide)</h1>
-      <p>Real price ranges from local contractors. What to expect, what affects your quote, and how to avoid overpaying.</p>
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Calculator and documents for estimating foundation repair costs in Williamson County" class="hero-img">
+      <div class="city-hero-inner">
+        <div class="city-hero-text">
+          <h1>Foundation Repair Costs in Williamson County (2026)</h1>
+          <p class="city-hero-sub">What homeowners in Williamson County actually pay for foundation repair — with a breakdown by repair type.</p>
+          <div class="city-hero-stats">
+            <span class="city-hero-stat">✓ Free Inspections</span>
+            <span class="city-hero-stat">✓ Vetted Local Contractors</span>
+            <span class="city-hero-stat">✓ No Obligation</span>
+          </div>
+        </div>
+        <a href="#lead-form" class="btn btn-orange city-hero-cta">Get Free Quotes →</a>
+      </div>
     </div>
   </div>
 
@@ -379,6 +388,7 @@
           </form>
 
           <!-- FAQ -->
+          <div id="faq">
           <h2 class="mb-20">Frequently Asked Questions About Foundation Repair Costs</h2>
           <div class="card mb-48">
             <details class="faq-item">
@@ -414,11 +424,24 @@
               <div class="faq-answer">A good warranty on pier installation should be lifetime and transferable to the next homeowner. It should cover both materials and labor. Ask if there are any exclusions, like drainage-related issues. Some companies charge an annual inspection fee to keep the warranty active — ask about this upfront.</div>
             </details>
           </div>
+          </div>
 
         </div>
 
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="lead-form">
+          <div class="sidebar-card">
+            <h4>Get Free Quotes</h4>
+            <p class="sidebar-desc">Quick form — we'll connect you with vetted contractors.</p>
+            <form class="sidebar-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+              <input type="hidden" name="subject" value="Foundation Repair Quote — Cost Guide | WilCo Guide">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+              <input type="text" name="zip" placeholder="Zip code" required>
+              <button type="submit">Get Free Quotes</button>
+            </form>
+          </div>
           <div class="sidebar-card">
             <h4>Quick Links</h4>
             <ul class="sidebar-links">
@@ -434,18 +457,6 @@
               <li><a href="/foundation-repair/pflugerville/">Pflugerville</a></li>
               <li><a href="/foundation-repair/taylor/">Taylor</a></li>
             </ul>
-          </div>
-          <div class="sidebar-card">
-            <h4>Get Free Quotes</h4>
-            <p class="sidebar-desc">Quick form — we'll connect you with vetted contractors.</p>
-            <form class="sidebar-form" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-              <input type="hidden" name="subject" value="Foundation Repair Quote — Cost Guide | WilCo Guide">
-              <input type="text" name="name" placeholder="Your name" required>
-              <input type="tel" name="phone" placeholder="Phone number" required>
-              <input type="text" name="zip" placeholder="Zip code" required>
-              <button type="submit">Get Free Quotes</button>
-            </form>
           </div>
           <div class="sidebar-card">
             <h4>Why WilCo Guide?</h4>

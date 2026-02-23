@@ -111,7 +111,7 @@
       <a href="#lead-form" class="btn btn-orange btn-sm sub-nav-cta">Get Free Quotes</a>
       <div class="sub-nav-center">
         <div class="sub-nav-dropdown">
-          <a href="#" class="sub-nav-link active">Cities <span class="sub-nav-arrow">&#9662;</span></a>
+          <button class="sub-nav-link active">Cities <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
           <div class="sub-nav-dropdown-menu">
             <a href="/foundation-repair/georgetown/">Georgetown</a>
             <a href="/foundation-repair/round-rock/">Round Rock</a>
@@ -125,7 +125,7 @@
         </div>
         <a href="/foundation-repair/costs/" class="sub-nav-link">Cost Guide</a>
         <a href="/foundation-repair/signs/" class="sub-nav-link">Warning Signs</a>
-        <a href="/foundation-repair/#faq" class="sub-nav-link">FAQ</a>
+        <a href="#faq" class="sub-nav-link">FAQ</a>
       </div>
       <div class="sub-nav-spacer"></div>
     </div>
@@ -138,11 +138,21 @@
     </div>
   </div>
 
-  <!-- Hero -->
-  <div class="page-hero">
+  <!-- City Hero -->
+  <div class="city-hero">
     <div class="container">
-      <h1>Foundation Repair in Leander, Texas</h1>
-      <p>Local contractors. Honest pricing ($4,000–$11,000). Free inspections for Leander homeowners.</p>
+      <div class="city-hero-inner">
+        <div class="city-hero-text">
+          <h1>Foundation Repair in Leander, TX</h1>
+          <p class="city-hero-sub">Crystal Falls and Travisso — rapid development on poorly prepped land means foundation problems are showing up fast.</p>
+          <div class="city-hero-stats">
+            <span class="city-hero-stat">✓ Free Inspections</span>
+            <span class="city-hero-stat">✓ Vetted Local Contractors</span>
+            <span class="city-hero-stat">✓ No Obligation</span>
+          </div>
+        </div>
+        <a href="#lead-form" class="btn btn-orange city-hero-cta">Get Free Quotes →</a>
+      </div>
     </div>
   </div>
 
@@ -288,6 +298,8 @@
 
           <p class="body-text mb-48">These steps won't fix existing damage. But they can slow down future problems and help your repair last longer.</p>
 
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="Contemporary homes in Leander, Texas" class="section-img" loading="lazy">
+
           <!-- How to Choose a Contractor -->
           <h2 class="section-heading">Choosing a Foundation Repair Contractor in Leander</h2>
           <p class="body-text mb-20">Here's what to look for when hiring a foundation repair company in Leander:</p>
@@ -324,6 +336,7 @@
           </div>
 
           <!-- FAQ -->
+          <div id="faq">
           <h2 class="section-heading">Frequently Asked Questions</h2>
           <div class="card mb-48">
             <details class="faq-item">
@@ -347,11 +360,26 @@
               <div class="faq-answer">Look for cracks in drywall near door frames and windows, doors that stick or won't close properly, gaps between the wall and ceiling, uneven or sloping floors, and cracks in exterior brick or stone. In Leander's clay soil, these signs often show up during late summer when the ground dries out and shrinks.</div>
             </details>
           </div>
+          </div><!-- /#faq -->
 
         </div>
 
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="lead-form">
+
+          <!-- Mini Form Card -->
+          <div class="sidebar-card">
+            <h4>Get a Free Quote</h4>
+            <p class="sidebar-desc">Describe your issue and we'll connect you with vetted Leander contractors.</p>
+            <form class="sidebar-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+              <input type="hidden" name="subject" value="Foundation Repair Quote — Leander | WilCo Guide">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+              <input type="email" name="email" placeholder="Email address" required>
+              <button type="submit">Get Free Quotes</button>
+            </form>
+          </div>
 
           <!-- Quick Links Card -->
           <div class="sidebar-card">
@@ -369,20 +397,6 @@
               <li><a href="/foundation-repair/hutto/">Hutto</a></li>
               <li><a href="/foundation-repair/florence/">Florence</a></li>
             </ul>
-          </div>
-
-          <!-- Mini Form Card -->
-          <div class="sidebar-card">
-            <h4>Get a Free Quote</h4>
-            <p class="sidebar-desc">Describe your issue and we'll connect you with vetted Leander contractors.</p>
-            <form class="sidebar-form" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-              <input type="hidden" name="subject" value="Foundation Repair Quote — Leander | WilCo Guide">
-              <input type="text" name="name" placeholder="Your name" required>
-              <input type="tel" name="phone" placeholder="Phone number" required>
-              <input type="email" name="email" placeholder="Email address" required>
-              <button type="submit">Get Free Quotes</button>
-            </form>
           </div>
 
           <!-- Trust Card -->
