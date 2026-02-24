@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Program — WilCo Guide | Get AI-Ready for $49/mo</title>
+  <meta name="description" content="Join WilCo Guide's Partner Program. AI-optimized SEO profiles, newsletter exposure to 25K+ locals, marketing tools, and more — all for $49/mo.">
+  <link rel="canonical" href="https://www.wilcoguide.com/partner/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fafafa;
+      color: #18181b;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
+    ::selection { background: #3589ff; color: #fff; }
+
+    /* ============================================
+       COLORS (design tokens)
+       ============================================ */
+    :root {
+      --brand: #3589ff;
+      --brand-dark: #2b6fd9;
+      --brand-light: #e8f0fe;
+      --brand-50: #eff6ff;
+      --accent: #f97316;
+      --accent-dark: #ea580c;
+      --dark: #1a1a2e;
+      --zinc-50: #fafafa;
+      --zinc-100: #f4f4f5;
+      --zinc-200: #e4e4e7;
+      --zinc-300: #d4d4d8;
+      --zinc-400: #a1a1aa;
+      --zinc-500: #71717a;
+      --zinc-600: #52525b;
+      --zinc-700: #3f3f46;
+      --zinc-800: #27272a;
+      --zinc-900: #18181b;
+      --zinc-950: #09090b;
+    }
+
+    /* ============================================
+       ANIMATIONS
+       ============================================ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    @keyframes ping {
+      75%, 100% { transform: scale(2); opacity: 0; }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .partner-hero {
+      position: relative;
+      background: var(--zinc-950);
+      color: #fff;
+      padding: 8rem 1.5rem 10rem;
+      overflow: hidden;
+      text-align: center;
+    }
+    .partner-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px),
+                  repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px);
+      opacity: 0.2;
+    }
+    .partner-hero .glow {
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 500px;
+      background: rgba(53, 137, 255, 0.2);
+      border-radius: 100%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .partner-hero .inner { position: relative; z-index: 10; max-width: 960px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px; border-radius: 9999px;
+      background: rgba(24,24,27,0.8); border: 1px solid rgba(63,63,70,0.5);
+      backdrop-filter: blur(8px);
+      color: var(--zinc-300); font-size: 0.875rem; font-weight: 500;
+      margin-bottom: 2.5rem;
+    }
+    .hero-badge .dot-wrap { position: relative; width: 8px; height: 8px; }
+    .hero-badge .dot-ping {
+      position: absolute; inset: 0;
+      border-radius: 9999px; background: rgba(53,137,255,0.75);
+      animation: ping 1.5s cubic-bezier(0,0,0.2,1) infinite;
+    }
+    .hero-badge .dot {
+      position: relative; display: block; width: 8px; height: 8px;
+      border-radius: 9999px; background: var(--brand);
+    }
+    .partner-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800; letter-spacing: -0.02em;
+      margin-bottom: 2rem; line-height: 1.1;
+    }
+    .partner-hero h1 .gradient {
+      background: linear-gradient(90deg, #60a5fa, #93c5fd, #f97316);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .partner-hero p.subtitle {
+      font-size: 1.125rem; color: var(--zinc-400);
+      max-width: 640px; margin: 0 auto 3rem; line-height: 1.7;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .partner-hero p.subtitle strong { color: #fff; }
+
+    /* CTA buttons row */
+    .hero-cta { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 4rem; }
+    .btn-hero {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 16px 32px; border: none;
+      background: var(--brand); color: #fff;
+      font-size: 1.125rem; font-weight: 600;
+      border-radius: 8px; transition: all 0.2s;
+    }
+    .btn-hero:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: 0 0 40px -10px rgba(53,137,255,0.5); }
+    .btn-hero svg { width: 20px; height: 20px; transition: transform 0.2s; }
+    .btn-hero:hover svg { transform: translateX(4px); }
+    .hero-limited { color: var(--zinc-500); font-size: 0.875rem; font-weight: 500; }
+    .hero-limited svg { width: 16px; height: 16px; color: var(--accent); vertical-align: -3px; margin-right: 4px; }
+
+    /* Stats strip */
+    .stats-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2.5rem; text-align: center;
+    }
+    .stat-val { font-size: 2rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; margin-bottom: 2px; }
+    .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-500); font-weight: 500; font-family: 'DM Sans', sans-serif; }
+
+    /* ============================================
+       FEATURES
+       ============================================ */
+    .features-section { padding: 6rem 1.5rem; background: var(--zinc-50); }
+    .features-section .inner { max-width: 1200px; margin: 0 auto; }
+    .section-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px; border-radius: 9999px;
+      background: var(--brand-50); border: 1px solid #dbeafe;
+      color: var(--brand); font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .section-head { text-align: center; margin-bottom: 5rem; }
+    .section-head h2 { font-size: clamp(1.75rem, 4vw, 3rem); font-weight: 700; color: var(--zinc-900); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .section-head p { font-size: 1.125rem; color: var(--zinc-600); max-width: 640px; margin: 0 auto; font-family: 'DM Sans', sans-serif; }
+
+    .features-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+    }
+    .feature-card {
+      position: relative; background: #fff; padding: 2rem;
+      border-radius: 1.5rem; border: 1px solid var(--zinc-200);
+      transition: all 0.3s; overflow: hidden;
+    }
+    .feature-card:hover { box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1); transform: translateY(-4px); border-color: transparent; }
+    .feature-card .icon-box {
+      width: 56px; height: 56px; border-radius: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .feature-card:hover .icon-box { transform: scale(1.1); }
+    .icon-brand { background: var(--brand); }
+    .icon-accent { background: var(--accent); }
+    .icon-blue { background: #2563eb; }
+    .icon-purple { background: #9333ea; }
+    .icon-yellow { background: #eab308; }
+    .icon-green { background: #22c55e; }
+    .feature-card .icon-box svg { width: 24px; height: 24px; color: #fff; }
+    .feature-card h3 {
+      font-size: 1.25rem; font-weight: 700; color: var(--zinc-900);
+      margin-bottom: 0.75rem; letter-spacing: -0.01em;
+      transition: color 0.3s;
+    }
+    .feature-card:hover h3 { color: var(--brand); }
+    .feature-card p { font-size: 0.875rem; color: var(--zinc-500); line-height: 1.7; font-family: 'DM Sans', sans-serif; }
+
+    /* ============================================
+       VALUE BREAKDOWN
+       ============================================ */
+    .value-section { padding: 6rem 1.5rem; background: #fff; border-top: 1px solid var(--zinc-100); border-bottom: 1px solid var(--zinc-100); }
+    .value-section .inner { max-width: 1100px; margin: 0 auto; }
+    .value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .value-left h2 { font-size: clamp(1.75rem, 4vw, 3rem); font-weight: 700; color: var(--zinc-900); letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .value-left > p { font-size: 1.125rem; color: var(--zinc-500); margin-bottom: 2.5rem; line-height: 1.7; font-family: 'DM Sans', sans-serif; }
+    .value-table {
+      background: var(--zinc-50); border-radius: 1rem;
+      border: 1px solid var(--zinc-200); padding: 2rem;
+    }
+    .value-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+    .value-row + .value-row { border-top: 1px solid var(--zinc-100); }
+    .value-row .left { display: flex; align-items: center; gap: 1rem; }
+    .value-row .check-circle {
+      width: 24px; height: 24px; border-radius: 9999px;
+      background: #dcfce7; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .value-row .check-circle svg { width: 14px; height: 14px; color: #16a34a; }
+    .value-row .label { font-weight: 500; color: var(--zinc-700); font-size: 0.95rem; }
+    .value-row .right { text-align: right; }
+    .value-row .price { font-weight: 700; color: var(--zinc-900); }
+    .value-row .context { font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); font-weight: 500; }
+    .value-total {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--zinc-200);
+    }
+    .value-total .label { font-weight: 500; color: var(--zinc-500); }
+    .value-total .amount { font-size: 1.875rem; font-weight: 700; color: var(--zinc-900); }
+
+    /* Pricing card (right side) */
+    .value-card-wrap { position: relative; padding-left: 2.5rem; }
+    .value-card-wrap .blob {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 300px; height: 300px;
+      background: rgba(53,137,255,0.2); border-radius: 9999px; filter: blur(80px);
+    }
+    .value-card {
+      position: relative;
+      background: var(--zinc-900); color: #fff;
+      padding: 2.5rem; border-radius: 1.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      text-align: center; border: 1px solid var(--zinc-800);
+    }
+    .value-card .save-badge {
+      position: absolute; top: -20px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff; padding: 8px 24px; border-radius: 9999px;
+      font-size: 0.875rem; font-weight: 700;
+      box-shadow: 0 4px 12px rgba(249,115,22,0.3);
+    }
+    .value-card .tier-label {
+      margin-top: 2rem; margin-bottom: 0.5rem;
+      color: var(--zinc-400); font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.2em; font-size: 0.7rem; font-family: 'DM Sans', sans-serif;
+    }
+    .value-card .price-big {
+      font-size: 4.5rem; font-weight: 700; letter-spacing: -0.04em; line-height: 1;
+    }
+    .value-card .price-unit { font-size: 1.25rem; color: var(--zinc-500); margin-left: 4px; }
+    .value-card .price-note {
+      color: var(--zinc-400); margin: 1rem auto 2rem; max-width: 280px; font-size: 0.95rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-claim {
+      width: 100%; padding: 16px; border: none;
+      background: #fff; color: var(--zinc-900);
+      font-size: 1.125rem; font-weight: 700;
+      border-radius: 12px; transition: background 0.2s;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+    }
+    .btn-claim:hover { background: var(--zinc-100); }
+    .value-card .spots {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; margin-top: 1.5rem; font-size: 0.75rem; color: var(--zinc-500);
+    }
+    .value-card .spots .dot {
+      width: 8px; height: 8px; border-radius: 9999px; background: #22c55e;
+      animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
+    }
+
+    /* ============================================
+       PRICING SECTION
+       ============================================ */
+    .pricing-section { padding: 6rem 1.5rem; background: var(--zinc-50); position: relative; overflow: hidden; }
+    .pricing-section::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(53,137,255,0.2), transparent);
+    }
+    .pricing-section .inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: start; }
+
+    .plan-card {
+      position: relative; display: flex; flex-direction: column;
+      border-radius: 1rem; transition: all 0.3s;
+    }
+    .plan-card.free { background: #fff; border: 1px solid var(--zinc-200); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .plan-card.partner {
+      background: #fff; border: 2px solid var(--brand);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+      transform: scale(1.05); z-index: 10;
+    }
+    .plan-card.pro { background: var(--zinc-950); color: #fff; border: 1px solid var(--zinc-800); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3); }
+
+    .plan-badge {
+      position: absolute; top: -14px; left: 0; right: 0; text-align: center;
+    }
+    .plan-badge span {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px 16px; border-radius: 9999px;
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; color: #fff;
+    }
+    .plan-badge .popular { background: var(--brand); box-shadow: 0 4px 12px rgba(53,137,255,0.3); }
+    .plan-badge .best-value { background: var(--accent); box-shadow: 0 4px 12px rgba(249,115,22,0.3); }
+
+    .plan-header { padding: 2rem 2rem 0; }
+    .plan-header h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .plan-card.pro .plan-header h3 { color: #fff; }
+    .plan-header .desc { font-size: 0.875rem; min-height: 40px; }
+    .plan-card.free .plan-header .desc, .plan-card.partner .plan-header .desc { color: var(--zinc-500); }
+    .plan-card.pro .plan-header .desc { color: var(--zinc-400); }
+
+    .plan-price { margin: 1.5rem 0; display: flex; align-items: baseline; }
+    .plan-price .amount { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; }
+    .plan-card.partner .plan-price .amount { color: var(--brand); }
+    .plan-price .cycle { font-size: 0.875rem; margin-left: 8px; }
+    .plan-card.free .plan-price .cycle, .plan-card.partner .plan-price .cycle { color: var(--zinc-400); }
+    .plan-card.pro .plan-price .cycle { color: var(--zinc-500); }
+
+    .plan-btn {
+      width: 100%; padding: 14px; border: none;
+      font-size: 1rem; font-weight: 600;
+      border-radius: 12px; transition: all 0.2s;
+    }
+    .plan-card.free .plan-btn { background: var(--zinc-100); color: var(--zinc-600); }
+    .plan-card.free .plan-btn:hover { background: var(--zinc-200); }
+    .plan-card.partner .plan-btn {
+      background: var(--brand); color: #fff;
+      box-shadow: 0 4px 12px rgba(53,137,255,0.3);
+    }
+    .plan-card.partner .plan-btn:hover { background: var(--brand-dark); transform: translateY(-2px); }
+    .plan-card.pro .plan-btn { background: #fff; color: var(--zinc-900); }
+    .plan-card.pro .plan-btn:hover { background: var(--zinc-100); }
+
+    .plan-features { padding: 1.5rem 2rem 2rem; flex-grow: 1; }
+    .feat-category {
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.15em; margin-bottom: 1rem; margin-top: 1.5rem;
+    }
+    .feat-category:first-child { margin-top: 0; }
+    .plan-card.free .feat-category, .plan-card.partner .feat-category { color: var(--zinc-400); }
+    .plan-card.pro .feat-category { color: var(--zinc-500); }
+
+    .feat-list { list-style: none; }
+    .feat-item { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.875rem; padding: 0.375rem 0; }
+    .feat-item .icon {
+      width: 16px; height: 16px; border-radius: 9999px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .feat-item .icon svg { width: 12px; height: 12px; }
+    .feat-item.included .icon { background: var(--brand-50); color: var(--brand); }
+    .plan-card.pro .feat-item.included .icon { background: rgba(53,137,255,0.2); color: #60a5fa; }
+    .feat-item.excluded .icon svg { color: var(--zinc-300); }
+    .feat-item.excluded span { color: var(--zinc-300); text-decoration: line-through; }
+    .plan-card.free .feat-item.included span, .plan-card.partner .feat-item.included span { color: var(--zinc-700); }
+    .plan-card.pro .feat-item.included span { color: var(--zinc-300); }
+
+    .pricing-guarantee {
+      text-align: center; margin-top: 4rem;
+      font-size: 0.875rem; color: var(--zinc-400);
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .pricing-guarantee svg { width: 16px; height: 16px; color: var(--brand); }
+
+    /* ============================================
+       COMPARISON TABLE
+       ============================================ */
+    .compare-section { padding: 5rem 1rem; background: #fff; border-top: 1px solid var(--zinc-100); }
+    .compare-section .inner { max-width: 1100px; margin: 0 auto; }
+    .compare-section .section-head { margin-bottom: 4rem; }
+    .compare-section .section-head h2 { font-size: clamp(1.5rem, 3vw, 1.875rem); }
+    .compare-section .section-head p { font-size: 1rem; }
+
+    .compare-wrap { overflow-x: auto; }
+    .compare-table { width: 100%; min-width: 800px; border-collapse: collapse; }
+    .compare-table th { padding: 1.5rem 1rem; }
+    .compare-table th:first-child { width: 33%; }
+    .compare-table th:nth-child(2), .compare-table th:nth-child(4) { width: 17%; }
+    .compare-table th:nth-child(3) { width: 17%; }
+
+    .col-free { text-align: center; }
+    .col-partner { text-align: center; background: rgba(53,137,255,0.03); border-left: 1px solid rgba(53,137,255,0.1); border-right: 1px solid rgba(53,137,255,0.1); }
+    .col-pro { text-align: center; background: var(--zinc-900); color: #fff; }
+    .th-partner { border-radius: 1rem 1rem 0 0; border-top: 1px solid rgba(53,137,255,0.1); }
+    .th-pro { border-radius: 1rem 1rem 0 0; }
+
+    .col-header-name { display: block; font-size: 1.125rem; font-weight: 700; }
+    .col-partner .col-header-name { color: var(--brand); }
+    .col-header-sub { display: block; font-size: 0.7rem; font-weight: 400; margin-top: 4px; }
+    .col-free .col-header-sub { color: var(--zinc-400); }
+    .col-partner .col-header-sub { color: rgba(53,137,255,0.6); }
+    .col-pro .col-header-sub { color: var(--zinc-400); }
+
+    .cat-row td { padding: 1rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--zinc-500); border-bottom: 1px solid var(--zinc-100); background: rgba(250,250,250,0.5); }
+    .cat-row .col-partner { background: rgba(53,137,255,0.03); }
+    .cat-row .col-pro { background: var(--zinc-900); }
+
+    .feat-row td { padding: 1rem; font-size: 0.875rem; font-weight: 500; color: var(--zinc-700); border-bottom: 1px solid var(--zinc-100); }
+    .feat-row:hover td { background: rgba(250,250,250,0.5); }
+    .feat-row:hover .col-partner { background: rgba(53,137,255,0.06); }
+    .feat-row:hover .col-pro { background: var(--zinc-800); }
+
+    .feat-row .col-pro { border-bottom-color: var(--zinc-800); }
+
+    /* Check/X/Text indicators */
+    .ind { display: flex; justify-content: center; align-items: center; }
+    .ind .check {
+      width: 24px; height: 24px; border-radius: 9999px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ind .check svg { width: 14px; height: 14px; stroke-width: 3; }
+    .col-free .check { background: var(--zinc-200); color: var(--zinc-500); }
+    .col-partner .check { background: var(--brand); color: #fff; }
+    .col-pro .check { background: #fff; color: var(--zinc-900); }
+    .ind .dash svg { width: 16px; height: 16px; color: var(--zinc-300); }
+    .col-pro .ind .dash svg { color: var(--zinc-700); }
+    .ind .text-badge {
+      font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;
+    }
+    .col-free .text-badge { background: var(--zinc-100); color: var(--zinc-600); }
+    .col-partner .text-badge { background: #dbeafe; color: #1d4ed8; }
+    .col-pro .text-badge { background: var(--zinc-800); color: var(--zinc-300); }
+
+    .compare-footer td { padding: 2rem 1rem; }
+    .compare-footer .col-partner { border-radius: 0 0 1rem 1rem; border-bottom: 1px solid rgba(53,137,255,0.1); }
+    .compare-footer .col-pro { border-radius: 0 0 1rem 1rem; }
+    .btn-table {
+      padding: 8px 24px; border: none;
+      font-size: 0.875rem; font-weight: 600;
+      border-radius: 8px; transition: all 0.2s;
+    }
+    .btn-table.partner-btn { background: var(--brand); color: #fff; }
+    .btn-table.partner-btn:hover { background: var(--brand-dark); }
+    .btn-table.pro-btn { background: #fff; color: var(--zinc-900); }
+    .btn-table.pro-btn:hover { background: var(--zinc-200); }
+    .btn-table.free-btn { background: none; border: none; color: var(--zinc-500); font-weight: 600; }
+    .btn-table.free-btn:hover { color: var(--zinc-900); }
+
+    /* ============================================
+       FINAL CTA
+       ============================================ */
+    .final-cta {
+      padding: 8rem 1.5rem; background: var(--zinc-950);
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px),
+                  repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px);
+      opacity: 0.1;
+    }
+    .final-cta .inner { position: relative; z-index: 10; max-width: 720px; margin: 0 auto; }
+    .final-cta h2 { font-size: clamp(1.75rem, 4vw, 3rem); font-weight: 700; color: #fff; letter-spacing: -0.02em; margin-bottom: 2rem; }
+    .final-cta p { color: var(--zinc-400); font-size: 1.125rem; margin-bottom: 2.5rem; line-height: 1.7; max-width: 640px; margin-left: auto; margin-right: auto; font-family: 'DM Sans', sans-serif; }
+    .btn-cta-white {
+      display: inline-flex; padding: 16px 40px; border: none;
+      background: #fff; color: var(--zinc-900);
+      font-size: 1.125rem; font-weight: 700;
+      border-radius: 8px; transition: all 0.2s;
+    }
+    .btn-cta-white:hover { background: var(--zinc-100); transform: translateY(-2px); }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .partner-footer {
+      background: var(--zinc-950); color: var(--zinc-400);
+      padding: 3rem 1.5rem; border-top: 1px solid var(--zinc-900);
+      text-align: center;
+    }
+    .partner-footer .inner { max-width: 1100px; margin: 0 auto; }
+    .partner-footer h4 { color: #fff; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .partner-footer .tagline { font-size: 0.875rem; margin-bottom: 1.5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; font-size: 0.875rem; margin-bottom: 2rem; }
+    .footer-links a { transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { padding-top: 2rem; border-top: 1px solid var(--zinc-900); font-size: 0.75rem; }
+    .footer-bottom p { margin-bottom: 0.5rem; }
+
+    /* ============================================
+       STICKY BAR
+       ============================================ */
+    .sticky-bar {
+      position: fixed; bottom: 0; left: 0; width: 100%;
+      background: rgba(255,255,255,0.8); backdrop-filter: blur(16px);
+      border-top: 1px solid var(--zinc-200);
+      padding: 1rem 1.5rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+      z-index: 50;
+      display: flex; justify-content: space-between; align-items: center;
+      transform: translateY(100%);
+      transition: transform 0.5s ease;
+    }
+    .sticky-bar.visible { transform: translateY(0); }
+    .sticky-bar .info { display: none; }
+    .sticky-bar .info p:first-child { font-weight: 700; color: var(--zinc-900); font-size: 0.95rem; }
+    .sticky-bar .status { display: flex; align-items: center; gap: 8px; }
+    .sticky-bar .status .dot { width: 8px; height: 8px; border-radius: 9999px; background: #22c55e; animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+    .sticky-bar .status span { font-size: 0.75rem; color: var(--zinc-500); }
+    .btn-sticky {
+      width: 100%; padding: 10px 24px; border: none;
+      background: var(--brand); color: #fff;
+      font-weight: 600; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: background 0.2s;
+    }
+    .btn-sticky:hover { background: var(--brand-dark); }
+    .btn-sticky svg { width: 16px; height: 16px; }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (min-width: 768px) {
+      .hero-cta { flex-direction: row; }
+      .sticky-bar .info { display: block; }
+      .sticky-bar .btn-sticky { width: auto; }
+      .stats-strip { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 1023px) {
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+      .plan-card.partner { transform: scale(1); }
+      .value-grid { grid-template-columns: 1fr; }
+      .value-card-wrap { padding-left: 0; margin-top: 3rem; }
+    }
+    @media (max-width: 767px) {
+      .partner-hero { padding: 5rem 1.25rem 6rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .stats-strip { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+      .stat-val { font-size: 1.5rem; }
+      .compare-wrap { margin: 0 -1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="partner-hero">
+    <div class="glow"></div>
+    <div class="inner reveal active">
+      <div class="hero-badge">
+        <span class="dot-wrap">
+          <span class="dot-ping"></span>
+          <span class="dot"></span>
+        </span>
+        The Future of Search is AI
+      </div>
+
+      <h1>
+        Will ChatGPT recommend<br>
+        <span class="gradient">you or your competitor?</span>
+      </h1>
+
+      <p class="subtitle">
+        Partner businesses get <strong>AI-optimized profiles</strong> that show up in AI search results, voice assistants, and next-gen recommendations. Plus, we promote you to 25,000+ locals.
+      </p>
+
+      <div class="hero-cta">
+        <a href="mailto:partners@wilcoguide.com?subject=WilCo%20Guide%20Partner%20Program%20—%20Application" class="btn-hero">
+          Get AI-Ready for $49/mo
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <p class="hero-limited">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z"/></svg>
+          Limited to first 50 businesses
+        </p>
+      </div>
+
+      <div class="stats-strip">
+        <div><div class="stat-val">25k+</div><div class="stat-label">Subscribers</div></div>
+        <div><div class="stat-val">100k+</div><div class="stat-label">Monthly Impressions</div></div>
+        <div><div class="stat-val">WilCo</div><div class="stat-label">Targeted Traffic</div></div>
+        <div><div class="stat-val">4.9/5</div><div class="stat-label">Partner Rating</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FEATURES
+       ============================================ -->
+  <section class="features-section">
+    <div class="inner">
+      <div class="section-head reveal">
+        <div class="section-badge">Why Partner?</div>
+        <h2>What Partner Businesses Get</h2>
+        <p>We provide the infrastructure to help you dominate local search and reach thousands of customers.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="icon-box icon-brand">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+          </div>
+          <h3>AI-Optimized SEO Profile</h3>
+          <p>Structured data, schema markup, and AI-friendly formatting so you show up when ChatGPT, Perplexity, and voice search recommend local businesses.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-box icon-accent">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"/></svg>
+          </div>
+          <h3>Multi-Channel Promotion</h3>
+          <p>Exposure to 25,000+ newsletter subscribers and 100,000+ social media impressions. Featured placements on WilCo Guide homepage.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-box icon-blue">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0"/></svg>
+          </div>
+          <h3>Hiring Made Easy</h3>
+          <p>Featured job postings in our job board and newsletters. Get more visibility than standard job boards alone to find the best local talent.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-box icon-purple">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.996.44-1.96.962-2.873 1.55C1.613 6.296 1.3 7.32 1.648 8.262c.177.48.44.913.775 1.274a5.063 5.063 0 0 0 .762.59M5.25 4.236V4.5c0 2.095.954 3.97 2.452 5.212M5.25 4.236V2.721a49.08 49.08 0 0 1 3.478-.951m.002 0a49.08 49.08 0 0 1 6.54 0m0 0a49.08 49.08 0 0 1 3.478.951M18.75 2.721V4.5c0 2.095-.954 3.97-2.452 5.212m4.952-5.476c.996.44 1.96.962 2.873 1.55.887.51 1.2 1.534.852 2.476-.177.48-.44.913-.775 1.274a5.063 5.063 0 0 1-.762.59m0 0a5.128 5.128 0 0 1-2.688 1.124M18.75 4.236V4.5c0-.248-.011-.493-.032-.735"/></svg>
+          </div>
+          <h3>Coverage &amp; Credibility</h3>
+          <p>Annual press release distribution, business profile features, and a 'Partner' badge that builds instant trust with new customers.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-box icon-yellow">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg>
+          </div>
+          <h3>Marketing Tools</h3>
+          <p>Access to content calendars, social captions, and pre-designed templates. Save hours of design work every single month.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="icon-box icon-green">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
+          </div>
+          <h3>Exclusive Discounts</h3>
+          <p>15-50% off essential services like Local SEO, Meta Ads, Web Design, and AI Agents. These savings alone pay for the membership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VALUE BREAKDOWN
+       ============================================ -->
+  <section class="value-section">
+    <div class="inner">
+      <div class="value-grid">
+        <div class="value-left reveal">
+          <h2>The Math is Simple.</h2>
+          <p>Hiring an agency for SEO, PR, and social media management costs thousands. We've productized the entire stack for the cost of a nice dinner.</p>
+
+          <div class="value-table">
+            <div class="value-row">
+              <div class="left">
+                <div class="check-circle"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div>
+                <span class="label">AI-Optimized SEO Profile</span>
+              </div>
+              <div class="right"><div class="price">$200/mo</div><div class="context">if you hired an agency</div></div>
+            </div>
+            <div class="value-row">
+              <div class="left">
+                <div class="check-circle"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div>
+                <span class="label">Newsletter Exposure (25K+ readers)</span>
+              </div>
+              <div class="right"><div class="price">$500/mo</div><div class="context">dedicated placement cost</div></div>
+            </div>
+            <div class="value-row">
+              <div class="left">
+                <div class="check-circle"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div>
+                <span class="label">Social Media Promotion</span>
+              </div>
+              <div class="right"><div class="price">$300/mo</div><div class="context">organic equivalent ads</div></div>
+            </div>
+            <div class="value-row">
+              <div class="left">
+                <div class="check-circle"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div>
+                <span class="label">Featured Job Postings</span>
+              </div>
+              <div class="right"><div class="price">$150/qtr</div><div class="context">vs $299+ on job boards</div></div>
+            </div>
+            <div class="value-row">
+              <div class="left">
+                <div class="check-circle"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div>
+                <span class="label">Press Release Distribution</span>
+              </div>
+              <div class="right"><div class="price">$500/yr</div><div class="context">PR agencies charge $2k+</div></div>
+            </div>
+            <div class="value-row">
+              <div class="left">
+                <div class="check-circle"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div>
+                <span class="label">Marketing Templates</span>
+              </div>
+              <div class="right"><div class="price">$50/mo</div><div class="context">saves design hours</div></div>
+            </div>
+
+            <div class="value-total">
+              <span class="label">Total Monthly Value</span>
+              <span class="amount">$1,500+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="value-card-wrap reveal">
+          <div class="blob"></div>
+          <div class="value-card">
+            <div class="save-badge">SAVE 97% TODAY</div>
+            <div class="tier-label">Founding Partner Rate</div>
+            <div class="price-big">$49<span class="price-unit">/mo</span></div>
+            <p class="price-note">Price locked forever for the first 50 partners.</p>
+            <a href="#pricing" class="btn-claim">Claim Offer</a>
+            <div class="spots">
+              <span class="dot"></span>
+              Spots filling up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRICING
+       ============================================ -->
+  <section id="pricing" class="pricing-section">
+    <div class="inner">
+      <div class="section-head reveal">
+        <h2>Simple, Transparent Pricing</h2>
+        <p>Invest in your business's digital future for less than the cost of a daily coffee.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- FREE -->
+        <div class="plan-card free reveal">
+          <div class="plan-header">
+            <h3>Free Listing</h3>
+            <p class="desc">Basic Visibility for your business.</p>
+            <div class="plan-price"><span class="amount">$0</span><span class="cycle">/Forever</span></div>
+            <a href="mailto:partners@wilcoguide.com?subject=WilCo%20Guide%20—%20Free%20Listing" class="plan-btn">Add Free Listing</a>
+          </div>
+          <div class="plan-features">
+            <div class="feat-category">Included</div>
+            <ul class="feat-list">
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Business page with info &amp; hours</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Directory search results</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Customer reviews</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Up to 5 photos</span></li>
+            </ul>
+            <div class="feat-category">Missing</div>
+            <ul class="feat-list">
+              <li class="feat-item excluded"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg></span><span>AI-optimized profile</span></li>
+              <li class="feat-item excluded"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg></span><span>Newsletter promotion</span></li>
+              <li class="feat-item excluded"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg></span><span>Social media features</span></li>
+              <li class="feat-item excluded"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg></span><span>Featured jobs</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PARTNER (Most Popular) -->
+        <div class="plan-card partner reveal">
+          <div class="plan-badge"><span class="popular"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:12px;height:12px"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg> Most Popular</span></div>
+          <div class="plan-header">
+            <h3>Partner</h3>
+            <p class="desc">Most Popular — Get Found &amp; Promoted.</p>
+            <div class="plan-price"><span class="amount">$49</span><span class="cycle">/per month (billed quarterly)</span></div>
+            <a href="mailto:partners@wilcoguide.com?subject=WilCo%20Guide%20Partner%20Program%20—%20Application" class="plan-btn">Join Partner</a>
+          </div>
+          <div class="plan-features">
+            <div class="feat-category">Discovery &amp; Exposure</div>
+            <ul class="feat-list">
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>AI-optimized SEO profile (Schema)</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Priority category placement</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Periodic featured homepage placement</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Newsletter classified mentions</span></li>
+            </ul>
+            <div class="feat-category">Hiring &amp; Talent</div>
+            <ul class="feat-list">
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Unlimited job board postings</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>1 featured job per quarter</span></li>
+            </ul>
+            <div class="feat-category">Marketing Tools</div>
+            <ul class="feat-list">
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Content calendar &amp; captions</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>15% off Services (SEO, Ads, Web)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PARTNER PRO -->
+        <div class="plan-card pro reveal">
+          <div class="plan-badge"><span class="best-value">Best Value</span></div>
+          <div class="plan-header">
+            <h3>Partner Pro</h3>
+            <p class="desc">Best Value — Systems, Training &amp; Software.</p>
+            <div class="plan-price"><span class="amount">$333</span><span class="cycle">/per month (billed quarterly)</span></div>
+            <a href="mailto:partners@wilcoguide.com?subject=WilCo%20Guide%20Partner%20Pro%20—%20Application" class="plan-btn">Join Partner Pro</a>
+          </div>
+          <div class="plan-features">
+            <div class="feat-category">Everything in Partner, PLUS:</div>
+            <ul class="feat-list">
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>AI-First CRM (Saves $3,500/yr)</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Unlimited Email Marketing</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>2-way SMS &amp; Missed Call Text-back</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Review Automation System</span></li>
+            </ul>
+            <div class="feat-category">Training</div>
+            <ul class="feat-list">
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Live expert training (2x/month)</span></li>
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>Private community access</span></li>
+            </ul>
+            <div class="feat-category">Enhanced Discounts</div>
+            <ul class="feat-list">
+              <li class="feat-item included"><span class="icon"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span><span>50% off Services (SEO, Ads, Web)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-guarantee reveal">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+        30-day money-back guarantee on Partner Pro plans.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COMPARISON TABLE
+       ============================================ -->
+  <section class="compare-section">
+    <div class="inner">
+      <div class="section-head reveal">
+        <h2>Compare Plans</h2>
+        <p>A detailed look at what is included in each partnership tier.</p>
+      </div>
+
+      <div class="compare-wrap reveal">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="col-free"><span class="col-header-name">Free</span><span class="col-header-sub">Listing Only</span></th>
+              <th class="col-partner th-partner"><span class="col-header-name">Partner</span><span class="col-header-sub">Most Popular</span></th>
+              <th class="col-pro th-pro"><span class="col-header-name">Partner Pro</span><span class="col-header-sub">Best Value</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Discovery & Profile -->
+            <tr class="cat-row"><td>Discovery &amp; Profile</td><td class="col-free"></td><td class="col-partner"></td><td class="col-pro"></td></tr>
+            <tr class="feat-row"><td>Directory Listing</td><td class="col-free"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Reviews &amp; Ratings</td><td class="col-free"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Photo Gallery</td><td class="col-free"><div class="ind"><span class="text-badge">Limited (5)</span></div></td><td class="col-partner"><div class="ind"><span class="text-badge">Unlimited</span></div></td><td class="col-pro"><div class="ind"><span class="text-badge">Unlimited</span></div></td></tr>
+            <tr class="feat-row"><td>AI-Optimized Schema (Rich Snippets)</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Voice Search Readiness</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Priority Search Placement</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+
+            <!-- Promotion & Reach -->
+            <tr class="cat-row"><td>Promotion &amp; Reach</td><td class="col-free"></td><td class="col-partner"></td><td class="col-pro"></td></tr>
+            <tr class="feat-row"><td>Newsletter Mention (25k+ Subs)</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><span class="text-badge">Classifieds</span></div></td><td class="col-pro"><div class="ind"><span class="text-badge">Featured</span></div></td></tr>
+            <tr class="feat-row"><td>Social Media Spotlight</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Homepage Feature Rotation</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Verified Partner Badge</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+
+            <!-- Hiring & Jobs -->
+            <tr class="cat-row"><td>Hiring &amp; Jobs</td><td class="col-free"></td><td class="col-partner"></td><td class="col-pro"></td></tr>
+            <tr class="feat-row"><td>Job Board Access</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><span class="text-badge">Unlimited</span></div></td><td class="col-pro"><div class="ind"><span class="text-badge">Unlimited</span></div></td></tr>
+            <tr class="feat-row"><td>Featured Job Posts</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><span class="text-badge">1/qtr</span></div></td><td class="col-pro"><div class="ind"><span class="text-badge">Monthly</span></div></td></tr>
+            <tr class="feat-row"><td>Talent Pool Access</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+
+            <!-- Tools & Automation -->
+            <tr class="cat-row"><td>Tools &amp; Automation</td><td class="col-free"></td><td class="col-partner"></td><td class="col-pro"></td></tr>
+            <tr class="feat-row"><td>Marketing Calendar</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Social Caption Templates</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Review Automation System</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>CRM / Lead Management</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+            <tr class="feat-row"><td>Email Marketing Suite</td><td class="col-free"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-partner"><div class="ind"><span class="dash"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg></span></div></td><td class="col-pro"><div class="ind"><div class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></div></div></td></tr>
+
+            <!-- Footer buttons -->
+            <tr class="compare-footer">
+              <td></td>
+              <td class="col-free"><a href="mailto:partners@wilcoguide.com?subject=WilCo%20Guide%20—%20Free%20Listing" class="btn-table free-btn">Create Listing</a></td>
+              <td class="col-partner"><a href="mailto:partners@wilcoguide.com?subject=WilCo%20Guide%20Partner%20Program%20—%20Application" class="btn-table partner-btn">Join Partner</a></td>
+              <td class="col-pro"><a href="mailto:partners@wilcoguide.com?subject=WilCo%20Guide%20Partner%20Pro%20—%20Application" class="btn-table pro-btn">Join Pro</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FINAL CTA
+       ============================================ -->
+  <section class="final-cta">
+    <div class="inner reveal">
+      <h2>Here's The Real Question</h2>
+      <p>In 12 months, who will dominate local business in WilCo? The businesses that got AI-ready, or the ones still hoping Google works like it used to?</p>
+      <a href="#pricing" class="btn-cta-white">Get AI-Ready Now</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="partner-footer">
+    <div class="inner">
+      <h4>WilCo Guide</h4>
+      <p class="tagline">The future of local business discovery.</p>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/seniors/">Seniors Directory</a>
+        <a href="/foundation-repair/">Foundation Repair</a>
+        <a href="mailto:partners@wilcoguide.com">partners@wilcoguide.com</a>
+      </div>
+      <div class="footer-bottom">
+        <p>Built in Williamson County, TX by operators who get it.</p>
+        <p>&copy; 2026 WilCo Guide. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       STICKY BAR
+       ============================================ -->
+  <div class="sticky-bar" id="stickyBar">
+    <div class="info">
+      <p>WilCo Guide Partner Program</p>
+      <div class="status">
+        <span class="dot"></span>
+        <span>Only 50 spots at $49/mo</span>
+      </div>
+    </div>
+    <a href="mailto:partners@wilcoguide.com?subject=WilCo%20Guide%20Partner%20Program%20—%20Application" class="btn-sticky">
+      Secure Your Spot
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+    </a>
+  </div>
+
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+  <script>
+    // Sticky bar — show after 800px scroll
+    var stickyBar = document.getElementById('stickyBar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 800) {
+        stickyBar.classList.add('visible');
+      } else {
+        stickyBar.classList.remove('visible');
+      }
+    });
+
+    // Scroll reveal animations
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    reveals.forEach(function(el) { observer.observe(el); });
+  </script>
+</body>
+</html>
