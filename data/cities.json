@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Round Rock",
+    "slug": "round-rock",
+    "state": "TX",
+    "description": "The largest city in Williamson County, Round Rock combines big-city amenities with genuine Texas charm. Home to major employers, excellent healthcare, and a thriving dining and entertainment scene.",
+    "seoTitle": "Round Rock, TX Business Directory",
+    "metaDescription": "Find local businesses in Round Rock, TX. Browse restaurants, services, healthcare, and more in Williamson County's largest city."
+  },
+  {
+    "name": "Georgetown",
+    "slug": "georgetown",
+    "state": "TX",
+    "description": "Known for its beautifully preserved downtown square and the Sun City 55+ community, Georgetown blends historic charm with modern growth along the I-35 corridor.",
+    "seoTitle": "Georgetown, TX Business Directory",
+    "metaDescription": "Find local businesses in Georgetown, TX. Browse restaurants, services, healthcare, and more around the most beautiful town square in Texas."
+  },
+  {
+    "name": "Cedar Park",
+    "slug": "cedar-park",
+    "state": "TX",
+    "description": "Cedar Park offers Hill Country access, excellent trails, and a growing business community. One of the fastest-growing cities in the Austin metro area.",
+    "seoTitle": "Cedar Park, TX Business Directory",
+    "metaDescription": "Find local businesses in Cedar Park, TX. Browse restaurants, services, healthcare, and more in this growing Williamson County city."
+  },
+  {
+    "name": "Pflugerville",
+    "slug": "pflugerville",
+    "state": "TX",
+    "description": "Diverse and affordable, Pflugerville is perfectly located near Austin with a strong sense of community, great parks, and a rapidly expanding business scene.",
+    "seoTitle": "Pflugerville, TX Business Directory",
+    "metaDescription": "Find local businesses in Pflugerville, TX. Browse restaurants, services, healthcare, and more in this diverse Williamson County community."
+  },
+  {
+    "name": "Leander",
+    "slug": "leander",
+    "state": "TX",
+    "description": "One of the fastest-growing cities in Texas, Leander offers affordable living, MetroRail access, and stunning Hill Country views along the US-183 corridor.",
+    "seoTitle": "Leander, TX Business Directory",
+    "metaDescription": "Find local businesses in Leander, TX. Browse restaurants, services, healthcare, and more in this fast-growing Williamson County city."
+  },
+  {
+    "name": "Hutto",
+    "slug": "hutto",
+    "state": "TX",
+    "description": "Small-town charm with big growth energy. Hutto is known for its hippo mascot, community spirit, and rapidly expanding neighborhoods and businesses.",
+    "seoTitle": "Hutto, TX Business Directory",
+    "metaDescription": "Find local businesses in Hutto, TX. Browse restaurants, services, healthcare, and more in this charming Williamson County community."
+  },
+  {
+    "name": "Liberty Hill",
+    "slug": "liberty-hill",
+    "state": "TX",
+    "description": "Nestled in the Hill Country, Liberty Hill is a scenic and growing community with a strong local identity, great schools, and an expanding commercial district.",
+    "seoTitle": "Liberty Hill, TX Business Directory",
+    "metaDescription": "Find local businesses in Liberty Hill, TX. Browse restaurants, services, healthcare, and more in this scenic Hill Country community."
+  },
+  {
+    "name": "Taylor",
+    "slug": "taylor",
+    "state": "TX",
+    "description": "A historic East Williamson County city experiencing a renaissance. Taylor is home to the Samsung semiconductor facility and a charming downtown with BBQ heritage.",
+    "seoTitle": "Taylor, TX Business Directory",
+    "metaDescription": "Find local businesses in Taylor, TX. Browse restaurants, services, healthcare, and more in this historic Williamson County city."
+  }
+]

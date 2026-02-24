@@ -1,0 +1,280 @@
+═══════════════════════════════════════════════════
+  WILCO GUIDE — DATA QUALITY REPORT
+  Generated: 2026-02-24
+═══════════════════════════════════════════════════
+
+1. OVERVIEW
+─────────────────────────────────────────
+Total businesses: 4544
+Total reviews: 5001
+Avg reviews per business: 1.1
+
+2. CITY DISTRIBUTION
+─────────────────────────────────────────
+
+Null/missing city: 0
+Empty city string: 0
+Distinct city values: 78
+
+WILLIAMSON COUNTY CITIES:
+  Round Rock             656  (14.4%)
+  Georgetown             556  (12.2%)
+  Cedar Park             532  (11.7%)
+  Pflugerville           451  (9.9%)
+  Leander                441  (9.7%)
+  Hutto                  330  (7.3%)
+  Liberty Hill           249  (5.5%)
+  Taylor                 230  (5.1%)
+  Florence                 4  (0.1%)
+  liberty hill             1  (0.0%)
+  Jarrell                  1  (0.0%)
+  Granger                  1  (0.0%)
+  SUBTOTAL              3452  (76.0%)
+
+NON-WILLIAMSON COUNTY CITIES (flagged):
+  ⚠ Austin               896  (19.7%)
+  ⚠ Liberty               46  (1.0%)
+  ⚠ New York              44  (1.0%)
+  ⚠ Dallas                16  (0.4%)
+  ⚠ Houston                5  (0.1%)
+  ⚠ Jersey City            5  (0.1%)
+  ⚠ New Orleans            4  (0.1%)
+  ⚠ Muskegon               4  (0.1%)
+  ⚠ Burnet                 3  (0.1%)
+  ⚠ Bertram                3  (0.1%)
+  ⚠ Washington             3  (0.1%)
+  ⚠ Lago Vista             2  (0.0%)
+  ⚠ Marble Falls           2  (0.0%)
+  ⚠ Spicewood              2  (0.0%)
+  ⚠ Livonia                2  (0.0%)
+  ⚠ Grand Rapids           2  (0.0%)
+  ⚠ Lewisville             2  (0.0%)
+  ⚠ Cedar Hill             2  (0.0%)
+  ⚠ Myrtle Beach           2  (0.0%)
+  ⚠ College Station        1  (0.0%)
+  ⚠ Dripping Springs       1  (0.0%)
+  ⚠ Lakeway                1  (0.0%)
+  ⚠ Brooklyn               1  (0.0%)
+  ⚠ Teaneck                1  (0.0%)
+  ⚠ Clifton                1  (0.0%)
+  ⚠ Jonestown              1  (0.0%)
+  ⚠ Fredericksburg         1  (0.0%)
+  ⚠ Lockhart               1  (0.0%)
+  ⚠ Hempstead              1  (0.0%)
+  ⚠ Driftwood              1  (0.0%)
+  ⚠ Sugar Land             1  (0.0%)
+  ⚠ San Marcos             1  (0.0%)
+  ⚠ The Colony             1  (0.0%)
+  ⚠ Carrollton             1  (0.0%)
+  ⚠ Richmond               1  (0.0%)
+  ⚠ Montgomery             1  (0.0%)
+  ⚠ Midlothian             1  (0.0%)
+  ⚠ Kansas City            1  (0.0%)
+  ⚠ Norton Shores          1  (0.0%)
+  ⚠ Walnut Springs         1  (0.0%)
+  ⚠ San Mateo              1  (0.0%)
+  ⚠ Ann Arbor              1  (0.0%)
+  ⚠ Trophy Club            1  (0.0%)
+  ⚠ Elgin                  1  (0.0%)
+  ⚠ McDade                 1  (0.0%)
+  ⚠ Irmo                   1  (0.0%)
+  ⚠ Metairie               1  (0.0%)
+  ⚠ Mont Belvieu           1  (0.0%)
+  ⚠ Redwood City           1  (0.0%)
+  ⚠ Allen Park             1  (0.0%)
+  ⚠ Dearborn Heights       1  (0.0%)
+  ⚠ Van Alstyne            1  (0.0%)
+  ⚠ Katy                   1  (0.0%)
+  ⚠ Palestine              1  (0.0%)
+  ⚠ Manor                  1  (0.0%)
+  ⚠ Southgate              1  (0.0%)
+  ⚠ Rockdale               1  (0.0%)
+  ⚠ Muldoon                1  (0.0%)
+  ⚠ Troy                   1  (0.0%)
+  ⚠ Greenville             1  (0.0%)
+  ⚠ Woodhaven              1  (0.0%)
+  ⚠ Traverse City          1  (0.0%)
+  ⚠ Johnson City           1  (0.0%)
+  ⚠ West Lake Hills        1  (0.0%)
+  ⚠ Hoboken                1  (0.0%)
+  ⚠ Union City             1  (0.0%)
+  SUBTOTAL              1092  (24.0%)
+
+3. CATEGORY DISTRIBUTION
+─────────────────────────────────────────
+Null/empty category: 0
+Distinct categories: 15
+
+TOP 50 CATEGORIES:
+    1. restaurants                                    1117
+    2. beauty                                          553
+    3. health                                          545
+    4. services                                        538
+    5. automotive                                      420
+    6. fitness                                         285
+    7. financial                                       226
+    8. entertainment                                   222
+    9. pets                                            222
+   10. education                                       214
+   11. home                                            198
+   12. Pets                                              1
+   13. Home                                              1
+   14. Health                                            1
+   15. Education                                         1
+
+4. DATA COMPLETENESS
+─────────────────────────────────────────
+Field                     Has Data  Missing       %
+──────────────────────────────────────────────────
+name                         4544        0  100.0%
+slug                         4543        1  100.0%
+category                     4544        0  100.0%
+address_street               4544        0  100.0%
+address_city                 4544        0  100.0%
+address_state                4544        0  100.0%
+address_zip                  4544        0  100.0%
+phone                        4424      120   97.4%
+website                      4197      347   92.4%
+email                           0     4544    0.0%
+hours                        4405      139   96.9%
+rating                       4544        0  100.0%
+review_count                 4544        0  100.0%
+price_range                   935     3609   20.6%
+photos (array)               4529       15   99.7%
+image (single)               4544        0  100.0%
+description                  4544        0  100.0%
+latitude                     4544        0  100.0%
+longitude                    4544        0  100.0%
+specialties                  4540        4   99.9%
+tags                         4540        4   99.9%
+
+5. RATING DISTRIBUTION
+─────────────────────────────────────────
+  No rating        0 
+  1.0-1.9          0 
+  2.0-2.9          0 
+  3.0-3.9          2 
+  4.0-4.4        923 ██████████
+  4.5-4.9       2694 ██████████████████████████████
+  5.0            925 ██████████
+
+  Average rating (where available): 4.69
+
+6. REVIEW DISTRIBUTION
+─────────────────────────────────────────
+  0 reviews        0 
+  1-5             31 
+  6-20           497 █████
+  21-50          642 ███████
+  51-100         611 ███████
+  101-500       1518 █████████████████
+  500+          1245 ██████████████
+
+7. LISTING & PARTNER TIERS
+─────────────────────────────────────────
+  free                 4544
+
+Listing tiers:
+  free                 4544
+
+8. SUBCATEGORY SAMPLE (top 30)
+─────────────────────────────────────────
+    1. Hair salons                                          154
+    2. Mexican restaurants                                  153
+    3. American restaurants                                 134
+    4. Auto repair                                          127
+    5. Dentists                                             124
+    6. Coffee shops                                         112
+    7. Nail salons                                          107
+    8. Doctors                                              104
+    9. Gyms                                                 101
+   10. Barber shops                                          96
+   11. Bars                                                  79
+   12. Plumbers                                              77
+   13. HVAC                                                  77
+   14. Preschools                                            75
+   15. Optometrists                                          72
+   16. Insurance agencies                                    72
+   17. Chiropractors                                         71
+   18. Physical therapy                                      70
+   19. Electricians                                          68
+   20. Bakeries                                              67
+   21. Italian restaurants                                   66
+   22. Cleaning services                                     65
+   23. Veterinarians                                         65
+   24. Lawn care                                             64
+   25. BBQ restaurants                                       63
+   26. Spas                                                  63
+   27. Entertainment venues                                  61
+   28. Pizza restaurants                                     60
+   29. Dog groomers                                          58
+   30. Chinese restaurants                                   57
+
+9. SAMPLE BUSINESS RECORD (first record)
+─────────────────────────────────────────
+  id                        58c72632-8099-4cfa-8d80-ed9c06d6408a
+  location_id               3714b0ea-56ae-426a-b2f1-5dff20efe29e
+  slug                      abby-s-crab-shack-cedar-park
+  name                      Abby's Crab Shack - Cedar Park
+  description               Abby's Crab Shack - Cedar Park is a seafood business located in Leander. Seafood restaurant, Crab ho...
+  custom_description        null
+  category                  restaurants
+  subcategory               Seafood restaurants
+  image                     https://lh3.googleusercontent.com/p/AF1QipP_pQHl149Ga9z8MjZdsUaBswn0SPycxuRFWMQ
+  photos                    ["https://lh3.googleusercontent.com/p/AF1QipP_pQHl149Ga9z8MjZdsUaBswn0SPycxuRFWMQ","https://lh3.goog
+  videos                    []
+  phone                     +1 512-986-7576
+  email                     null
+  website                   https://abbyscrabshacktx.com/
+  address_street            202 Walton Way ste 101
+  address_city              Cedar Park
+  address_state             TX
+  address_zip               78613
+  latitude                  30.5205645
+  longitude                 -97.8327702
+  hours                     {"friday":{"open":"11AM","close":"10PM","isOpen":true},"monday":{"open":"11AM","close":"9PM","isOpen
+  rating                    4.1
+  review_count              461
+  price_range               $$
+  year_established          null
+  owner                     null
+  specialties               ["Seafood restaurant, Crab house"]
+  amenities                 []
+  tags                      ["restaurants","Seafood restaurants","Leander"]
+  social_links              null
+  listing_tier              free
+  is_featured               false
+  premium_since             null
+  backlink_enabled          false
+  last_updated              2026-01-29T05:38:02.299442+00:00
+  created_at                2026-01-29T05:38:02.299442+00:00
+  partner_tier              free
+  stripe_customer_id        null
+  stripe_subscription_id    null
+  subscription_status       null
+  featured_until            null
+  updated_at                2026-02-17T05:08:38.78593+00:00
+
+10. SAMPLE REVIEW RECORD (first record)
+─────────────────────────────────────────
+  id                        0c37557d-cc95-418e-80cc-5aeda86166af
+  business_id               7dc61214-1c77-4c33-a0ba-03e49c1680f4
+  author_name               Kanaiya Patel
+  author_id                 103872077013564516300
+  author_image              https://lh3.googleusercontent.com/a-/ALV-UjUO0U40uXmtUTDW2tI26UxYlgWg_fhcydtQJYpVrrvlKeGGXzFybw=s120...
+  author_link               https://www.google.com/maps/contrib/103872077013564516300?hl=en
+  rating                    5
+  text                      Awesome authentic food. Went first time and liked taste, service. Must try Mexican food.
+  review_date               2026-01-16T18:03:35+00:00
+  review_timestamp          1768586615
+  review_id                 Ci9DQUlRQUNvZENodHljRjlvT21GWWVXSXhTbXR5VWpRMVdVbExXbE5zV213NU1WRRAB
+  review_link               https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21GWWVXSXhTbXR...
+  likes                     0
+  owner_response            null
+  owner_response_date       null
+  source                    google
+  created_at                2026-01-29T06:50:56.556586+00:00
+
+═══════════════════════════════════════════════════
+  END OF REPORT
+═══════════════════════════════════════════════════

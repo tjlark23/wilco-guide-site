@@ -1,0 +1,240 @@
+═══════════════════════════════════════════════════
+  WILCO GUIDE — PROCESSED DATA REPORT
+  Generated: 2026-02-24
+═══════════════════════════════════════════════════
+
+STEP 1: Filter to Williamson County cities
+─────────────────────────────────────────
+Raw total: 4544
+Excluded Austin: 896
+Excluded non-WilCo: 196
+Remaining WilCo businesses: 3452
+
+STEP 2: City Distribution (clean)
+─────────────────────────────────────────
+  Round Rock             656  ✓ page
+  Georgetown             556  ✓ page
+  Cedar Park             532  ✓ page
+  Pflugerville           451  ✓ page
+  Leander                441  ✓ page
+  Hutto                  330  ✓ page
+  Liberty Hill           250  ✓ page
+  Taylor                 230  ✓ page
+  Florence                 4    (no standalone page)
+  Jarrell                  1    (no standalone page)
+  Granger                  1    (no standalone page)
+
+Cities with standalone pages (≥50): 8
+Cities without pages (<50): 3
+Businesses in page-eligible cities: 3446
+Businesses in small cities (still in directory/search): 6
+
+STEP 3: Category Distribution (clean)
+─────────────────────────────────────────
+  restaurants            749  (21.7%)
+  health                 461  (13.4%)
+  beauty                 438  (12.7%)
+  services               436  (12.6%)
+  automotive             335  (9.7%)
+  fitness                212  (6.1%)
+  financial              180  (5.2%)
+  pets                   177  (5.1%)
+  education              170  (4.9%)
+  entertainment          152  (4.4%)
+  home                   142  (4.1%)
+
+Total categories: 11
+
+STEP 4: Subcategory Breakdown
+─────────────────────────────────────────
+
+  RESTAURANTS (749 total):
+    Mexican restaurants                      120
+    American restaurants                     109
+    Coffee shops                             87
+    Pizza restaurants                        45
+    Bakeries                                 43
+    Italian restaurants                      42
+    Asian restaurants                        37
+    Chinese restaurants                      33
+    BBQ restaurants                          33
+    Burger restaurants                       33
+    Indian restaurants                       32
+    Breakfast restaurants                    29
+    Fast food restaurants                    26
+    Mediterranean restaurants                25
+    Seafood restaurants                      17
+    Sushi restaurants                        14
+    Vietnamese restaurants                   9
+    Thai restaurants                         9
+    Tex-Mex restaurants                      4
+    Japanese restaurants                     2
+
+  HEALTH (461 total):
+    Dentists                                 107
+    Doctors                                  90
+    Optometrists                             62
+    Physical therapy                         61
+    Chiropractors                            61
+    Pediatricians                            28
+    Urgent care clinics                      22
+    Dermatologists                           20
+    Medical clinics                          6
+    Family medicine                          3
+    (none)                                   1
+
+  BEAUTY (438 total):
+    Hair salons                              121
+    Nail salons                              93
+    Barber shops                             77
+    Spas                                     50
+    Massage therapy                          36
+    Waxing salons                            24
+    Beauty salons                            20
+    Skin care                                17
+
+  SERVICES (436 total):
+    HVAC                                     68
+    Plumbers                                 66
+    Electricians                             54
+    Lawn care                                53
+    Cleaning services                        51
+    Roofing                                  35
+    Pest control                             26
+    Painters                                 25
+    Landscaping                              24
+    Handyman                                 18
+    Home repair                              16
+
+  AUTOMOTIVE (335 total):
+    Auto repair                              111
+    Car dealerships                          45
+    Body shops                               37
+    Car wash                                 36
+    Oil change                               35
+    Tire shops                               33
+    Auto parts                               33
+    Mechanics                                5
+
+  FITNESS (212 total):
+    Gyms                                     85
+    Martial arts                             34
+    Dance studios                            25
+    Yoga studios                             23
+    Personal trainers                        20
+    Pilates studios                          17
+    CrossFit                                 6
+    Fitness centers                          2
+
+  FINANCIAL (180 total):
+    Insurance agencies                       62
+    Accountants                              35
+    Banks                                    27
+    Mortgage brokers                         22
+    Financial advisors                       17
+    Tax services                             10
+    Credit unions                            7
+
+  PETS (177 total):
+    Veterinarians                            55
+    Dog groomers                             44
+    Pet stores                               31
+    Pet training                             25
+    Pet boarding                             20
+    (none)                                   1
+    Animal hospitals                         1
+
+  EDUCATION (170 total):
+    Preschools                               62
+    Tutoring centers                         40
+    Childcare                                28
+    Music lessons                            25
+    After school programs                    9
+    Private schools                          4
+    Dance studios                            1
+    (none)                                   1
+
+  ENTERTAINMENT (152 total):
+    Bars                                     58
+    Entertainment venues                     50
+    Wineries                                 11
+    Breweries                                10
+    Arcades                                  9
+    Movie theaters                           9
+    Bowling                                  5
+
+  HOME (142 total):
+    Furniture stores                         29
+    Home improvement                         24
+    Kitchen and bath                         23
+    Flooring                                 21
+    Interior designers                       17
+    Appliance stores                         14
+    Hardware stores                          13
+    (none)                                   1
+
+STEP 5: City × Category Matrix (combos with 3+ businesses)
+─────────────────────────────────────────
+Total city×category combos with 3+ businesses: 89
+
+Top 20:
+  Round Rock       restaurants        170
+  Cedar Park       restaurants        130
+  Georgetown       restaurants        125
+  Pflugerville     restaurants        94
+  Round Rock       health             81
+  Leander          restaurants        78
+  Cedar Park       health             77
+  Round Rock       beauty             74
+  Round Rock       services           74
+  Georgetown       health             71
+  Georgetown       beauty             70
+  Leander          services           69
+  Georgetown       services           69
+  Pflugerville     beauty             65
+  Cedar Park       beauty             64
+  Leander          health             63
+  Pflugerville     health             63
+  Taylor           restaurants        59
+  Cedar Park       services           59
+  Round Rock       automotive         59
+
+STEP 6: Review Linkage
+─────────────────────────────────────────
+Total raw reviews: 5001
+Reviews linked to clean businesses: 4725
+Orphaned reviews (excluded businesses): 276
+Businesses with at least 1 review in DB: 193 / 3452
+
+STEP 7: Data Completeness (clean set)
+─────────────────────────────────────────
+  phone                 3359 / 3452  (97.3%)
+  website               3155 / 3452  (91.4%)
+  hours                 3333 / 3452  (96.6%)
+  photos                3440 / 3452  (99.7%)
+  image                 3452 / 3452  (100.0%)
+  rating > 0            3452 / 3452  (100.0%)
+  description           3452 / 3452  (100.0%)
+  lat/lng               3452 / 3452  (100.0%)
+  price_range            586 / 3452  (17.0%)
+  slug                  3451 / 3452  (100.0%)
+
+═══════════════════════════════════════════════════
+  FINAL SUMMARY
+═══════════════════════════════════════════════════
+
+Clean businesses: 3452
+Linked reviews: 4725
+Cities with pages: 8
+Categories: 11
+City×Category combo pages (3+): 89
+
+Estimated page count:
+  1 directory index
+  11 category pages
+  8 city pages
+  3452 business profile pages
+  89 city×category combo pages
+  1 search page
+  ─────────────
+  3562 TOTAL PAGES

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Restaurants & Dining",
+    "slug": "restaurants",
+    "icon": "🍽️",
+    "description": "Find the best restaurants, cafes, and dining options across Williamson County. From family favorites to hidden gems, explore local dining in Round Rock, Georgetown, Cedar Park, and beyond.",
+    "shortDescription": "Local restaurants, cafes, and dining across Williamson County.",
+    "seoTitle": "Restaurants & Dining in Williamson County, TX",
+    "metaDescription": "Discover the best restaurants and dining in Williamson County, TX. Browse local favorites in Round Rock, Georgetown, Cedar Park, Leander, and more."
+  },
+  {
+    "name": "Health & Medical",
+    "slug": "health",
+    "icon": "🏥",
+    "description": "Healthcare providers, clinics, specialists, and medical services throughout Williamson County. Find doctors, dentists, urgent care, and wellness professionals near you.",
+    "shortDescription": "Doctors, clinics, specialists, and healthcare services in WilCo.",
+    "seoTitle": "Health & Medical Services in Williamson County, TX",
+    "metaDescription": "Find healthcare providers, doctors, clinics, and medical services in Williamson County, TX. Trusted health professionals in Round Rock, Georgetown, and beyond."
+  },
+  {
+    "name": "Beauty & Personal Care",
+    "slug": "beauty",
+    "icon": "💇",
+    "description": "Salons, spas, barbershops, and personal care services in Williamson County. Look and feel your best with local beauty professionals.",
+    "shortDescription": "Salons, spas, barbershops, and personal care in WilCo.",
+    "seoTitle": "Beauty & Personal Care in Williamson County, TX",
+    "metaDescription": "Find salons, spas, barbershops, and personal care services in Williamson County, TX. Top-rated beauty professionals in Round Rock, Georgetown, Cedar Park, and more."
+  },
+  {
+    "name": "Home Services",
+    "slug": "services",
+    "icon": "🔧",
+    "description": "Home services, contractors, repair professionals, and maintenance providers across Williamson County. Find trusted local pros for every home project.",
+    "shortDescription": "Contractors, repair pros, and home service providers in WilCo.",
+    "seoTitle": "Home Services & Contractors in Williamson County, TX",
+    "metaDescription": "Find trusted home services, contractors, and repair professionals in Williamson County, TX. Local pros in Round Rock, Georgetown, Cedar Park, and more."
+  },
+  {
+    "name": "Automotive",
+    "slug": "automotive",
+    "icon": "🚗",
+    "description": "Auto repair, dealerships, car washes, and automotive services in Williamson County. Keep your vehicle running with trusted local shops.",
+    "shortDescription": "Auto repair, dealers, and car services across WilCo.",
+    "seoTitle": "Automotive Services in Williamson County, TX",
+    "metaDescription": "Find auto repair shops, dealerships, and car services in Williamson County, TX. Trusted automotive professionals in Round Rock, Georgetown, and beyond."
+  },
+  {
+    "name": "Fitness & Recreation",
+    "slug": "fitness",
+    "icon": "💪",
+    "description": "Gyms, fitness studios, recreation centers, and active lifestyle businesses in Williamson County. Stay fit and active with local fitness options.",
+    "shortDescription": "Gyms, studios, and recreation options across WilCo.",
+    "seoTitle": "Fitness & Recreation in Williamson County, TX",
+    "metaDescription": "Find gyms, fitness studios, and recreation centers in Williamson County, TX. Stay active in Round Rock, Georgetown, Cedar Park, and more."
+  },
+  {
+    "name": "Financial Services",
+    "slug": "financial",
+    "icon": "💰",
+    "description": "Banks, financial advisors, insurance agents, and accounting services in Williamson County. Manage your finances with trusted local professionals.",
+    "shortDescription": "Banks, advisors, insurance, and financial pros in WilCo.",
+    "seoTitle": "Financial Services in Williamson County, TX",
+    "metaDescription": "Find banks, financial advisors, insurance agents, and accounting services in Williamson County, TX. Trusted financial professionals near you."
+  },
+  {
+    "name": "Pets & Animals",
+    "slug": "pets",
+    "icon": "🐾",
+    "description": "Veterinarians, pet grooming, boarding, and animal services in Williamson County. Give your pets the best care with local providers.",
+    "shortDescription": "Vets, groomers, boarding, and pet services in WilCo.",
+    "seoTitle": "Pet Services in Williamson County, TX",
+    "metaDescription": "Find veterinarians, pet groomers, boarding, and animal services in Williamson County, TX. Top pet care providers in Round Rock, Georgetown, and beyond."
+  },
+  {
+    "name": "Education & Tutoring",
+    "slug": "education",
+    "icon": "📚",
+    "description": "Schools, tutoring centers, learning programs, and educational services in Williamson County. Find the right education options for your family.",
+    "shortDescription": "Schools, tutoring, and learning programs in WilCo.",
+    "seoTitle": "Education & Tutoring in Williamson County, TX",
+    "metaDescription": "Find schools, tutoring centers, and educational services in Williamson County, TX. Quality education options in Round Rock, Georgetown, and more."
+  },
+  {
+    "name": "Entertainment & Events",
+    "slug": "entertainment",
+    "icon": "🎭",
+    "description": "Entertainment venues, event spaces, activities, and fun things to do in Williamson County. Discover local entertainment options for the whole family.",
+    "shortDescription": "Venues, events, and entertainment across WilCo.",
+    "seoTitle": "Entertainment & Events in Williamson County, TX",
+    "metaDescription": "Find entertainment venues, event spaces, and things to do in Williamson County, TX. Fun activities in Round Rock, Georgetown, Cedar Park, and more."
+  },
+  {
+    "name": "Home & Garden",
+    "slug": "home",
+    "icon": "🏡",
+    "description": "Home improvement, garden centers, furniture stores, and interior design services in Williamson County. Make your house a home with local businesses.",
+    "shortDescription": "Home improvement, garden, and furnishing in WilCo.",
+    "seoTitle": "Home & Garden in Williamson County, TX",
+    "metaDescription": "Find home improvement, garden centers, and furniture stores in Williamson County, TX. Local home and garden businesses in Round Rock, Georgetown, and beyond."
+  }
+]
