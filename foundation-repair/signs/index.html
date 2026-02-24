@@ -92,60 +92,43 @@
 </head>
 <body>
 
-  <!-- Nav -->
-  <nav class="site-nav">
-    <div class="container">
-      <a href="/" class="site-nav__logo">
-        <div class="site-nav__logo-mark">W</div>
-        WilCo Guide
-      </a>
-      <ul class="site-nav__links">
-        <li><a href="/">News</a></li>
-        <li><a href="/">Jobs</a></li>
-        <li><a href="/">Directory</a></li>
-        <li><a href="https://seniors.wilcoguide.com">Seniors</a></li>
-        <li><a href="/">More</a></li>
-      </ul>
-      <a href="/" class="site-nav__subscribe">Subscribe</a>
-      <button class="site-nav__hamburger" onclick="document.querySelector('.site-nav__mobile-menu').classList.toggle('is-open')" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="site-nav__mobile-menu">
-    <a href="/">News</a>
-    <a href="/">Jobs</a>
+<header class="site-header">
+  <div class="header-t1">
+    <a href="/" class="header-logo"><img src="https://i.imgur.com/WnTTjef.png" alt="WilCo Guide"></a>
+    <nav class="header-nav">
+      <a href="/">Directory</a>
+      <a href="/seniors/">Seniors</a>
+      <a href="#" class="disabled">Jobs</a>
+      <a href="/foundation-repair/" class="active">Foundation Repair</a>
+      <a href="/estate-sales/" class="disabled">Estate Sales</a>
+    </nav>
+    <a href="/partner/" class="header-cta desktop-only">Get Featured <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
+    <button class="header-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button>
+  </div>
+  <div id="mobileMenu" class="header-mobile-menu">
     <a href="/">Directory</a>
-    <a href="https://seniors.wilcoguide.com">Seniors</a>
-    <a href="/">More</a>
-    <a href="/" class="site-nav__subscribe">Subscribe</a>
+    <a href="/seniors/">Seniors</a>
+    <a href="#" class="disabled">Jobs</a>
+    <a href="/foundation-repair/" class="active">Foundation Repair</a>
+    <a href="/estate-sales/" class="disabled">Estate Sales</a>
+    <a href="/partner/" class="mobile-cta">Get Featured →</a>
   </div>
-
-  <!-- Secondary Nav -->
-  <div class="sub-nav">
-    <div class="sub-nav-inner">
-      <a href="#lead-form" class="btn btn-orange btn-sm sub-nav-cta">Get Free Quotes</a>
-      <div class="sub-nav-center">
-        <div class="sub-nav-dropdown">
-          <button class="sub-nav-link">Cities <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="sub-nav-dropdown-menu">
-            <a href="/foundation-repair/georgetown/">Georgetown</a>
-            <a href="/foundation-repair/round-rock/">Round Rock</a>
-            <a href="/foundation-repair/cedar-park/">Cedar Park</a>
-            <a href="/foundation-repair/leander/">Leander</a>
-            <a href="/foundation-repair/liberty-hill/">Liberty Hill</a>
-            <a href="/foundation-repair/hutto/">Hutto</a>
-            <a href="/foundation-repair/pflugerville/">Pflugerville</a>
-            <a href="/foundation-repair/taylor/">Taylor</a>
-          </div>
-        </div>
-        <a href="/foundation-repair/costs/" class="sub-nav-link">Cost Guide</a>
-        <a href="/foundation-repair/signs/" class="sub-nav-link active">Warning Signs</a>
-        <a href="#faq" class="sub-nav-link">FAQ</a>
-      </div>
-      <div class="sub-nav-spacer"></div>
+  <div class="header-t2">
+    <div class="header-t2-inner">
+      <a href="/foundation-repair/round-rock/" class="t2-pill">Round Rock</a>
+      <a href="/foundation-repair/georgetown/" class="t2-pill">Georgetown</a>
+      <a href="/foundation-repair/cedar-park/" class="t2-pill">Cedar Park</a>
+      <a href="/foundation-repair/leander/" class="t2-pill">Leander</a>
+      <a href="/foundation-repair/pflugerville/" class="t2-pill">Pflugerville</a>
+      <a href="/foundation-repair/hutto/" class="t2-pill">Hutto</a>
+      <a href="/foundation-repair/liberty-hill/" class="t2-pill">Liberty Hill</a>
+      <a href="/foundation-repair/taylor/" class="t2-pill">Taylor</a>
+      <a href="/foundation-repair/costs/" class="t2-pill">Costs</a>
+      <a href="/foundation-repair/signs/" class="t2-pill active">Signs</a>
     </div>
   </div>
+  <div class="header-t3">🏠 Need foundation repair? <a href="#lead-form">Get a free quote →</a></div>
+</header>
 
   <!-- Breadcrumbs -->
   <div class="container">
@@ -423,15 +406,40 @@
   </div>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      &copy; 2026 WilCo Guide <span>&middot;</span>
-      <a href="#">About</a> <span>&middot;</span>
-      <a href="#">Advertise</a> <span>&middot;</span>
-      <a href="#">Contact</a> <span>&middot;</span>
-      <a href="#">Privacy</a>
+<footer class="site-footer-unified">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://i.imgur.com/WnTTjef.png" alt="WilCo Guide">
+        <p class="tagline">Your complete guide to Williamson County, TX. Local businesses, services, and community resources — all in one place.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/">Directory</a>
+        <a href="/seniors/">Seniors</a>
+        <a href="/foundation-repair/">Foundation Repair</a>
+        <a href="/estate-sales/">Estate Sales</a>
+      </div>
+      <div class="footer-col">
+        <h4>For Businesses</h4>
+        <a href="/partner/">Partner Program</a>
+        <a href="mailto:advertise@wilcoguide.com">Advertise</a>
+        <a href="/partner/">Get Featured</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="mailto:hello@wilcoguide.com">Contact</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
     </div>
-  </footer>
+    <div class="footer-bottom-bar">
+      <span>© 2026 WilCo Guide. All rights reserved.</span>
+      <span>Built in Williamson County, TX</span>
+      <a href="mailto:hello@wilcoguide.com">hello@wilcoguide.com</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
