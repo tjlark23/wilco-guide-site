@@ -1696,6 +1696,7 @@ p:last-child { margin-bottom: 0; }
   border-bottom: 1px solid var(--border);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
 }
 .header-t2::-webkit-scrollbar { display: none; }
 .header-t2-inner {
@@ -1704,6 +1705,8 @@ p:last-child { margin-bottom: 0; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.75rem 1.5rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 .t2-pill {
   display: inline-flex;
@@ -1717,6 +1720,7 @@ p:last-child { margin-bottom: 0; }
   border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: all 0.2s;
 }
 .t2-pill:hover { border-color: var(--blue); color: var(--blue); }
