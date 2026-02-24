@@ -1167,6 +1167,8 @@ p:last-child { margin-bottom: 0; }
   position: relative;
   overflow: hidden;
   padding: 80px 0;
+  background: var(--dark);
+  color: var(--white);
 }
 
 .hero-bg {
