@@ -1,7 +1,8 @@
-import { getBusinesses, getBusinessesByCategory, getTopRatedBusinesses } from '../../lib/getBusinesses';
+import { getBusinesses, getBusinessesByCategory, getTopRatedBusinesses, getFeaturedBusinesses } from '../../lib/getBusinesses';
 import { getCategories } from '../../lib/getCategories';
 import { getCities } from '../../lib/getCities';
 import BusinessCard from '../../components/BusinessCard';
+import PremiumCard from '../../components/PremiumCard';
 import CategoryRow from '../../components/CategoryRow';
 import CTABanner from '../../components/CTABanner';
 import SchemaMarkup from '../../components/SchemaMarkup';
@@ -10,7 +11,7 @@ import { getCategoryName } from '../../components/BusinessCard';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Business Directory for Williamson County, TX',
+  title: 'Business Directory for Williamson County, TX | WilCo Guide',
   description: 'Find local businesses, restaurants, services, and more in Williamson County, TX. The complete directory for Round Rock, Georgetown, Cedar Park, Leander, Pflugerville, Hutto, Liberty Hill, and Taylor.',
   openGraph: {
     title: 'WilCo Guide | Business Directory for Williamson County, TX',
@@ -26,13 +27,17 @@ export default function DirectoryIndexPage() {
   const allBusinesses = getBusinesses();
   const categories = getCategories();
   const cities = getCities();
-  const topRated = getTopRatedBusinesses(8);
+  const topRated = getTopRatedBusinesses(12);
+  const featured = getFeaturedBusinesses();
 
-  // Build category rows for the main page
+  // Build category rows — enough for the interleaved layout
   const categoryOrder = [
-    'restaurants', 'health', 'beauty', 'services',
-    'automotive', 'fitness', 'financial', 'pets',
-    'education', 'entertainment', 'home',
+    'restaurants', 'health',           // batch 1 (before "This Week")
+    'beauty', 'services',              // batch 2 (after "This Week")
+    'automotive', 'fitness',           // batch 3 (after city grid)
+    'financial', 'pets',               // batch 4 (after CTA)
+    'education', 'entertainment',      // batch 5
+    'home',                            // batch 6
   ];
 
   const categoryRows = categoryOrder.map(slug => {
@@ -43,13 +48,36 @@ export default function DirectoryIndexPage() {
     return { category: cat, businesses, slug };
   }).filter(row => row.category && row.businesses.length > 0);
 
-  // Split for interleaving with content breaks
+  // Split into batches for interleaving with content breaks
   const batch1 = categoryRows.slice(0, 2);
   const batch2 = categoryRows.slice(2, 4);
   const batch3 = categoryRows.slice(4, 6);
-  const remaining = categoryRows.slice(6);
+  const batch4 = categoryRows.slice(6, 8);
+  const remaining = categoryRows.slice(8);
 
-  // Category counts for grid
+  // Premium spotlight — use featured first, then top rated
+  const premiumBusinesses = featured.length > 0
+    ? featured.slice(0, 3)
+    : topRated.slice(0, 3);
+
+  const heroRightBusinesses = topRated
+    .filter(b => !premiumBusinesses.find(p => p.slug === b.slug))
+    .slice(0, 4);
+
+  // Popular categories with real counts
+  const popularCategories = [
+    { slug: 'restaurants', name: 'Restaurants' },
+    { slug: 'health', name: 'Healthcare' },
+    { slug: 'beauty', name: 'Beauty & Spas' },
+    { slug: 'services', name: 'Services' },
+    { slug: 'automotive', name: 'Automotive' },
+    { slug: 'fitness', name: 'Fitness' },
+  ].map(cat => ({
+    ...cat,
+    count: getBusinessesByCategory(cat.slug).length,
+  }));
+
+  // Category counts for the full icon grid
   const categoryCounts = categoryOrder.map(slug => ({
     slug,
     name: getCategoryName(slug),
@@ -57,11 +85,23 @@ export default function DirectoryIndexPage() {
     count: getBusinessesByCategory(slug).length,
   }));
 
-  // City counts for grid
+  // City counts
   const cityCounts = cities.map(city => ({
     ...city,
     count: allBusinesses.filter(b => b.citySlug === city.slug).length,
   }));
+
+  // City descriptions
+  const cityDescriptions = {
+    'round-rock': 'The sports capital of Texas with a vibrant downtown',
+    'georgetown': 'Most Beautiful Town Square in Texas with rich heritage',
+    'cedar-park': 'Growing hub with entertainment and dining options',
+    'pflugerville': 'Family-friendly community near Austin with great food',
+    'leander': 'Fastest-growing city with new restaurants and shops',
+    'hutto': 'Small-town charm with a growing local business scene',
+    'liberty-hill': 'Hill Country living with scenic beauty and new growth',
+    'taylor': 'Historic downtown with authentic Tex-Mex and BBQ',
+  };
 
   // Schema
   const collectionSchema = generateCollectionPageSchema(
@@ -84,45 +124,29 @@ export default function DirectoryIndexPage() {
       <SchemaMarkup schema={breadcrumbSchema} />
 
       <div className="directory-page">
-        {/* Hero */}
+        {/* ══════════ Directory Hero Text Block ══════════ */}
         <div className="directory-hero">
           <h1 className="directory-hero-title">Williamson County Business Directory</h1>
           <p className="directory-hero-subtitle">
-            Discover {allBusinesses.length.toLocaleString()} local businesses across {cities.length} cities in Williamson County, TX.
+            Discover {allBusinesses.length.toLocaleString()} local businesses across {cities.length} cities — restaurants, healthcare, services, and more.
           </p>
         </div>
 
-        {/* Category Grid */}
-        <div className="category-grid-section">
-          <div className="category-icon-grid">
-            {categoryCounts.map(cat => (
-              <Link key={cat.slug} href={`/directory/category/${cat.slug}`} className="category-icon-card">
-                <span className="category-icon-emoji">{cat.icon}</span>
-                <span className="category-icon-name">{cat.name}</span>
-                <span className="category-icon-count">{cat.count} businesses</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Top Rated Spotlight */}
-        {topRated.length > 0 && (
-          <div className="spotlight-section">
-            <div className="section-header">
-              <div className="section-title-group">
-                <h2 className="section-title">Top Rated in WilCo</h2>
-                <span className="section-count">Highest rated businesses</span>
-              </div>
-            </div>
-            <div className="row-grid">
-              {topRated.slice(0, 4).map(biz => (
-                <BusinessCard key={biz.slug} business={biz} />
+        {/* ══════════ 1. Hero Grid — PremiumCard + 4 BusinessCards ══════════ */}
+        <div className="spotlight-section">
+          <div className="hero-grid">
+            {premiumBusinesses.length > 0 && (
+              <PremiumCard businesses={premiumBusinesses} />
+            )}
+            <div className="hero-right">
+              {heroRightBusinesses.map((business) => (
+                <BusinessCard key={business.slug} business={business} />
               ))}
             </div>
           </div>
-        )}
+        </div>
 
-        {/* First 2 Category Rows */}
+        {/* ══════════ 2. First 2 Category Rows ══════════ */}
         {batch1.map(({ category, businesses, slug }) => (
           <CategoryRow
             key={slug}
@@ -133,23 +157,65 @@ export default function DirectoryIndexPage() {
           />
         ))}
 
-        {/* City Grid */}
-        <div className="content-break city-grid-section">
+        {/* ══════════ 3. This Week in WilCo ══════════ */}
+        <div className="content-break this-week-section">
           <div className="content-break-inner">
-            <h2 className="content-break-title">Browse by City</h2>
-            <p className="content-break-subtitle">Explore businesses in your neighborhood</p>
-            <div className="city-card-grid">
-              {cityCounts.map(city => (
-                <Link key={city.slug} href={`/directory/city/${city.slug}`} className="city-card">
-                  <h3 className="city-card-name">{city.name}</h3>
-                  <span className="city-card-count">{city.count} businesses</span>
-                </Link>
-              ))}
+            <h2 className="content-break-title">Explore the Directory</h2>
+            <p className="content-break-subtitle">Find what you need across Williamson County</p>
+
+            <div className="this-week-grid">
+              {/* Card 1: Popular Categories */}
+              <div className="tw-card tw-card-categories">
+                <div className="tw-card-accent" style={{ backgroundColor: 'var(--orange)' }} />
+                <div className="tw-card-body">
+                  <div className="tw-card-icon">📂</div>
+                  <h3 className="tw-card-title">Popular Categories</h3>
+                  <div className="tw-category-list">
+                    {popularCategories.map(cat => (
+                      <Link key={cat.slug} href={`/directory/category/${cat.slug}`} className="tw-category-item">
+                        <span className="tw-category-name">{cat.name}</span>
+                        <span className="tw-category-count">{cat.count} businesses</span>
+                      </Link>
+                    ))}
+                  </div>
+                  <Link href="/directory/search" className="tw-card-link">Search all categories →</Link>
+                </div>
+              </div>
+
+              {/* Card 2: Local Favorites */}
+              <div className="tw-card tw-card-tip">
+                <div className="tw-card-accent" style={{ backgroundColor: 'var(--blue)' }} />
+                <div className="tw-card-body">
+                  <div className="tw-card-icon">⭐</div>
+                  <h3 className="tw-card-title">Top Rated This Month</h3>
+                  <p className="tw-card-text">
+                    Williamson County businesses consistently earn high marks from locals.
+                    From family-owned restaurants in Georgetown to fitness studios in Cedar Park,
+                    see which businesses are earning 5-star reviews from your neighbors.
+                  </p>
+                  <Link href="/directory/category/restaurants" className="tw-card-link">Browse top-rated businesses →</Link>
+                </div>
+              </div>
+
+              {/* Card 3: Get Listed */}
+              <div className="tw-card tw-card-spotlight">
+                <div className="tw-card-accent" style={{ backgroundColor: 'var(--green)' }} />
+                <div className="tw-card-body">
+                  <div className="tw-card-icon">🏪</div>
+                  <h3 className="tw-card-title">Own a Local Business?</h3>
+                  <p className="tw-card-text">
+                    Get found by thousands of Williamson County residents searching for local
+                    services every month. Claim your free listing, add photos, respond to reviews,
+                    and stand out with a featured placement.
+                  </p>
+                  <Link href="/partner/" className="tw-card-link">Get listed on WilCo Guide →</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Next 2 Category Rows */}
+        {/* ══════════ 4. Next 2 Category Rows ══════════ */}
         {batch2.map(({ category, businesses, slug }) => (
           <CategoryRow
             key={slug}
@@ -160,10 +226,24 @@ export default function DirectoryIndexPage() {
           />
         ))}
 
-        {/* CTA Banner */}
-        <CTABanner />
+        {/* ══════════ 5. Browse by Category — Icon Grid ══════════ */}
+        <div className="content-break category-grid-break">
+          <div className="content-break-inner">
+            <h2 className="content-break-title">Browse by Category</h2>
+            <p className="content-break-subtitle">All {allBusinesses.length.toLocaleString()} businesses organized by type</p>
+            <div className="category-icon-grid">
+              {categoryCounts.map(cat => (
+                <Link key={cat.slug} href={`/directory/category/${cat.slug}`} className="category-icon-card">
+                  <span className="category-icon-emoji">{cat.icon}</span>
+                  <span className="category-icon-name">{cat.name}</span>
+                  <span className="category-icon-count">{cat.count} businesses</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
 
-        {/* Next 2 Category Rows */}
+        {/* ══════════ 6. Next 2 Category Rows ══════════ */}
         {batch3.map(({ category, businesses, slug }) => (
           <CategoryRow
             key={slug}
@@ -174,7 +254,47 @@ export default function DirectoryIndexPage() {
           />
         ))}
 
-        {/* Remaining Category Rows */}
+        {/* ══════════ 7. Browse by City ══════════ */}
+        <div className="content-break relocation-section">
+          <div className="content-break-inner">
+            <div className="relocation-header">
+              <div>
+                <h2 className="content-break-title" style={{ textAlign: 'left' }}>Browse by City</h2>
+                <p className="content-break-subtitle" style={{ textAlign: 'left' }}>Explore businesses in your neighborhood</p>
+              </div>
+            </div>
+
+            <div className="relocation-city-grid">
+              {cityCounts.map(city => (
+                <Link
+                  key={city.slug}
+                  href={`/directory/city/${city.slug}`}
+                  className="relocation-city-card"
+                >
+                  <h3 className="relocation-city-name">{city.name}</h3>
+                  <p className="relocation-city-desc">{cityDescriptions[city.slug] || ''}</p>
+                  <span className="relocation-city-highlight">{city.count} businesses</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ══════════ 8. Next 2 Category Rows ══════════ */}
+        {batch4.map(({ category, businesses, slug }) => (
+          <CategoryRow
+            key={slug}
+            title={category.name}
+            count={getBusinessesByCategory(slug).length}
+            categorySlug={slug}
+            businesses={businesses}
+          />
+        ))}
+
+        {/* ══════════ 9. CTA Banner ══════════ */}
+        <CTABanner />
+
+        {/* ══════════ 10. Remaining Category Rows ══════════ */}
         {remaining.map(({ category, businesses, slug }) => (
           <CategoryRow
             key={slug}
@@ -185,7 +305,7 @@ export default function DirectoryIndexPage() {
           />
         ))}
 
-        {/* Bottom CTA */}
+        {/* ══════════ 11. Bottom CTA ══════════ */}
         <CTABanner />
       </div>
     </>
